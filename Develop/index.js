@@ -1,10 +1,10 @@
 //Import file system, inquirer, querystrings, path, process modules
 const fs = require('fs');
 const inquirer = require('inquirer');
+const process = require('process');
+const prompt = require('prompt');
 const generateMarkdown = require('./utils/generateMarkdown.js')
-
-// const generateMarkdown = require(generateMarkdown);
-
+// console.log(generateMarkdown);
 
 const questions = [
     {
@@ -59,20 +59,82 @@ const questions = [
     {
         type: "image",
         message: "Enter user Github profile picture",
-        picture: "",
+        picture: "picture",
     },
     {
         type: "input",
         message: "Enter user Github email address",
-        email: "email address",
+        email: "email-address",
     }
 ]
 console.log(questions);
+
+
 
 // the user will be presented with a prompt function that will show user a question
 // then capture the users response and push to an a class or object 
 // First prompted for their Github username
 // then prompted for all of the below:
+
+inquirer
+.prompt(questions)
+.then(function(response) {
+
+  if (response.confirm === response.password) {
+    console.log("Success!");
+  }
+  else {
+    console.log("You forgot your password already?!");
+  }
+});
+
+// we add a newline character to the command line argument
+fs.appendFile("log.txt", process.argv[2] + '\n', function(err) {
+
+    if (err) {
+      console.log(err);
+    }
+    else {
+      console.log("Commit logged!");
+    }
+  
+  });
+
+ 
+
+let maths = require("./maths.js");
+let operation = process.argv[2];
+let numOne = parseInt(process.argv[3]);
+let numTwo = parseInt(process.argv[4]);
+
+
+// we add a newline character to the command line argument
+fs.appendFile("log.txt", process.argv[2] + '\n', function(err) {
+
+    if (err) {
+      console.log(err);
+    }
+    else {
+      console.log("Commit logged!");
+    }
+  
+  });
+  
+
+// * In `index.js`, create variables to capture the values passed from the 
+// command line in `process.argv`: `operation`, `numOne` and `numTwo`.
+//will need to use parseInt() with process.argv
+
+// fs.writeFile("readme.txt", process.argv[2], function(err) {
+
+//   if (err) {
+//     return console.log(err);
+//   }
+
+//   console.log("Success!");
+
+// });
+// console.log(process.argv);
 
 
 // inquirer.prompt(questions)
@@ -93,7 +155,7 @@ console.log(questions);
 // ****As user enters information
 // ****it is pushed to a class or Object
 // .push()
-
+//aslo need to parse responses to file
 // fs.writeFile("log.txt", process.argv[2], function(err) {
 
 //     if (err) {
