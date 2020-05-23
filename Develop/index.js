@@ -81,6 +81,7 @@ function init() {
         var readme = 'README.md';
         console.log(readme);
 
+        //this line of code prints the data object to the terminal
         generateMarkdown(data, readme); 
         // ----- this is interchangable 
         // with generateMarkdown in writeFile function
