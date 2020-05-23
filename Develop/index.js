@@ -54,9 +54,29 @@ const questions = [{
 // console.log(questions);
 
 function writeToFile(fileName, data) {
+    console.log("testing the write to file function")
+   
 
 
-    fs.writeFile(fileName, data, 'utf-8', function(err) {
+    inquirer.prompt(questions)
+    .then(data => {
+        console.log('testing the init');
+
+        var fileName = 'README.md';
+
+        var  data = generateMarkdown(data);
+
+    });
+
+
+}
+
+function writeToFile(fileName, data) {
+    console.log("testing the write to file function")
+   
+
+
+    fs.writeFile(fileName, "utf-8", function(err) {
         if (err) {
             return console.log(err);
         }
@@ -69,17 +89,19 @@ function writeToFile(fileName, data) {
 // writeToFile();
 
 function init() {
+    console.log('testing');
 
     inquirer.prompt(questions)
-    .then(data => {
-        console.log(data);
+    .then(function(data) {
+        console.log('testing the init');
 
         var fileName = 'README.md';
 
         var  data = generateMarkdown(data);
 
+        writeToFile();
     });
-    writeToFile();
+    
    
 }
 
