@@ -76,11 +76,16 @@ function init() {
     .then(function(data) {
         console.log('testing the init');
 
-        var fileName = 'README.md';
+        // then right Here send the data to the readme file
 
-        let readme = generateMarkdown(data);
+        var readme = 'README.md';
+        console.log(readme);
 
-        writeToFile();
+        generateMarkdown(data, readme); 
+        // ----- this is interchangable 
+        // with generateMarkdown in writeFile function
+
+        // writeFile();
     });
     
    
