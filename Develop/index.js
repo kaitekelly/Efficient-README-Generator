@@ -1,4 +1,3 @@
-//Import file system, inquirer, querystrings, path, process modules
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js');
@@ -41,52 +40,34 @@ const questions = [{
     },
     {
         type: "input",
-        message: "Contributing",
+        message: "Who contributed to your project?",
         name: "names",
     },
     {
         type: "input",
-        message: "Tests",
+        message: "Were any tests performed?",
         name: "testname",
     },
-
 ]
 // console.log(questions);
 
-function writeToFile(fileName, data) {
-    console.log("testing the write to file function")
-   
-
-
-    inquirer.prompt(questions)
-    .then(data => {
-        console.log('testing the init');
-
-        var fileName = 'README.md';
-
-        var  data = generateMarkdown(data);
-
-    });
-
-
-}
 
 function writeToFile(fileName, data) {
-    console.log("testing the write to file function")
-   
+    console.log("testing the write to file function");
+    var fileName = 'README.md';
 
 
-    fs.writeFile(fileName, "utf-8", function(err) {
-        if (err) {
-            return console.log(err);
-        }
+    fs.writeFile(fileName, data,  "utf-8", function(err) {
+        if (err)  throw err;
+            // return console.log(err);
+        generateMarkdown();
         console.log("Success!");
     });
 
 
+
 }
 
-// writeToFile();
 
 function init() {
     console.log('testing');
@@ -97,7 +78,7 @@ function init() {
 
         var fileName = 'README.md';
 
-        var  data = generateMarkdown(data);
+        let readme = generateMarkdown(data);
 
         writeToFile();
     });
@@ -118,46 +99,10 @@ init();
 // command line in `process.argv`: `operation`, `numOne` and `numTwo`.
 //will need to use parseInt() with process.argv
 
-// fs.writeFile("readme.txt", process.argv[2], function(err) {
-
-//   if (err) {
-//     return console.log(err);
-//   }
-
-//   console.log("Success!");
-
-// });
-// console.log(process.argv);
-
-
-// inquirer.prompt(questions)
-// .then(function(data) {
-//     //need to check if this is correct
-//     let fileName = data.message.toLowerCase().split(' ').join(' ') + ".json";
-
-//     fs.writeFile(fileName, JSON.stringify(data, null, '\t'), function(err) {
-//         if (err) {
-//             return console.log(err);
-//         }
-
-//         console.log("Success!")
-//     });
-
-// });
-
 // ****As user enters information
 // ****it is pushed to a class or Object
 // .push()
 //aslo need to parse responses to file
-// fs.writeFile("log.txt", process.argv[2], function(err) {
-
-//     if (err) {
-//       return console.log(err);
-//     }
-
-//     console.log("Success!");
-
-//   });
 
 
 // ****then the class or object is used to generate the readme fileName

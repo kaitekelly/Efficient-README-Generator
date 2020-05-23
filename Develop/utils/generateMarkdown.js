@@ -1,4 +1,7 @@
+let index = require('../index.js')
+
 function generateMarkdown(data) {
+  console.log(data);
   return `
 # ${data.title}
 
