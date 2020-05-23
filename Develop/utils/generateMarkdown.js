@@ -3,11 +3,13 @@ let index = require('../index.js')
 function generateMarkdown(data) {
   console.log(data);
   return `
+# ${data.username}
+
 # ${data.title}
 
 # ${data.description}
 
-# ${data.tableofcontents}
+# ${data.toc}
 
 # ${data.installation}
 
@@ -15,11 +17,9 @@ function generateMarkdown(data) {
 
 # ${data.license}
 
-# ${data.contributing}
+# ${data.contribute}
 
 # ${data.tests}
-
-# ${data.questions}
 
 * The generated README includes 1 badge that's specific to the repository.
 // {

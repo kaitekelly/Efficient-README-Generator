@@ -5,48 +5,48 @@ const generateMarkdown = require('./utils/generateMarkdown.js');
 
 const questions = [{
         type: "input",
-        message: "What is your GitHub user name?",
         name: "username",
+        message: "What is your GitHub user name?",
     },
     {
         type: "input",
-        message: "What is your project title?",
         name: "title",
+        message: "What is your project title?",
     },
     {
         type: "input",
+        name: "description",
         message: "What is your project description?",
-        name: "description",
     },
     {
         type: "input",
+        name: "toc",
         message: "Enter table of Contents",
-        name: "description",
     },
     {
         type: "input",
+        name: "installation",
         message: "Installation:",
-        name: "description",
     },
     {
         type: "input",
+        name: "usage",
         message: "Usage",
-        name: "description",
     },
     {
         type: "input",
+        name: "license",
         message: "License",
-        name: "ISC",
     },
     {
         type: "input",
+        name: "contribute",
         message: "Who contributed to your project?",
-        name: "names",
     },
     {
         type: "input",
+        name: "tests",
         message: "Were any tests performed?",
-        name: "testname",
     },
 ]
 // console.log(questions);
@@ -59,14 +59,9 @@ function writeToFile(fileName, data) {
 
     fs.writeFile(fileName, data,  "utf-8", function(err) {
         if (err)  throw err;  
-        // return console.log(err);
-        // generateMarkdown();
         console.log("Success!");
-        
+
     });
-    // writeFile();
-
-
 
 }
 
@@ -79,18 +74,12 @@ function init() {
     .then(function(data) {
         console.log('testing the init');
 
-        // var readme = 'README.md';
-        // console.log(readme);
-
         //this line of code prints the data object to the terminal
         let readme = generateMarkdown(data);
         var fileName = 'README.md';
         return writeToFile(fileName, readme);
 
-        // writeFile();
-    });
-    
-   
+    }); 
 }
 
 init();
