@@ -15,11 +15,12 @@ function generateMarkdown(data) {
 
 # ${data.usage}
 
-# ${data.license}
-
 # ${data.contribute}
 
 # ${data.tests}
+
+# ${data.license}
+
 
 * The generated README includes 1 badge that's specific to the repository.
 // {

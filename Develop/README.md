@@ -9,13 +9,14 @@
 
 # installation
 
-# usage
+# instructions
+
+# collaborators
+
+# tests
 
 # license
 
-# contribute
-
-# tests
 
 * The generated README includes 1 badge that's specific to the repository.
 // {

@@ -21,32 +21,32 @@ const questions = [{
     {
         type: "input",
         name: "toc",
-        message: "Enter table of Contents",
+        message: "Enter Table of Contents to make it easier for users to find what they need",
     },
     {
         type: "input",
         name: "installation",
-        message: "Installation:",
+        message: "What steps are required to install your project? Please provide instructions to setup development environment.",
     },
     {
         type: "input",
         name: "usage",
-        message: "Usage",
-    },
-    {
-        type: "input",
-        name: "license",
-        message: "License",
+        message: "Provide instructions and examples for use. Include screenshots as needed.",
     },
     {
         type: "input",
         name: "contribute",
-        message: "Who contributed to your project?",
+        message: "List collaborators and link their GitHub profiles, third-party assets, and any tutorials used.",
     },
     {
         type: "input",
         name: "tests",
-        message: "Were any tests performed?",
+        message: "List any tests written and examples on how to run them.",
+    },
+    {
+        type: "input",
+        name: "license",
+        message: "List any licenses' your project may include. Choices include ISC, MIT, Apache License 2.0, GNU GPLv2, GNU GPLv3",
     },
 ]
 // console.log(questions);
