@@ -49,8 +49,6 @@ const questions = [{
         message: "List any licenses' your project may include. Choices include ISC, MIT, Apache License 2.0, GNU GPLv2, GNU GPLv3",
     },
 ]
-// console.log(questions);
-
 
 function writeToFile(fileName, data) {
     console.log("testing the write to file function");
@@ -64,8 +62,6 @@ function writeToFile(fileName, data) {
     });
 
 }
-
-// fs.writeFile(‘<fileName>’,<contenet>,callbackFunction)
 
 function init() {
     console.log('testing');

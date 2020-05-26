@@ -3,30 +3,36 @@ let index = require('../index.js')
 function generateMarkdown(data) {
   console.log(data);
   return `
-# ${data.username}
 
-# ${data.title}
-
-# ${data.description}
-
-# ${data.toc}
-
-# ${data.installation}
-
-# ${data.usage}
-
-# ${data.contribute}
-
-# ${data.tests}
-
-# ${data.license}
+  ![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
 
 
-* The generated README includes 1 badge that's specific to the repository.
-// {
-  //     // placeholder for badge - https://shields.io/endpoint
-  //     badge: 
-  // },
+# Username: 
+${data.username}
+
+# Title:
+${data.title}
+
+# Description:
+${data.description}
+
+# Table of Contents: 
+${data.toc}
+
+# Installation: 
+${data.installation}
+
+# Usage: 
+${data.usage}
+
+# Contribute: 
+${data.contribute}
+
+# Tests: 
+${data.tests}
+
+# License: 
+${data.license}
 
 `;
 }
