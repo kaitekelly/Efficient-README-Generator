@@ -4,8 +4,7 @@ function generateMarkdown(data) {
   console.log(data);
   return `
 
-  ![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)
-
+<a href="https://github.com/${data.username}"><img src="https://img.shields.io/badge/Github%20page-${data.username}-1abc9c.svg" alt="User's github profile"></a>
 
 # Username: 
 ${data.username}

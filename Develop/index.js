@@ -79,35 +79,3 @@ function init() {
 }
 
 init();
-
-// **************************
-// Pseudo Code 
-
-// Application is invoked with this command = node index.js
-
-// When application is invoked when
-//  generateMarkdown.on is clicked
-// the user will be presented with a prompt function that will show user a question
-// then capture the users response and push to an a class or object 
-// First prompted for their Github username
-// then prompted for all of the below:
-
-// * At least one badge
-// * Project title
-// * Description
-// * Table of Contents
-// * Installation
-// * Usage
-// * License
-// * Contributing
-// * Tests
-// * Questions
-//   * User GitHub profile picture
-//   * User GitHub email
-//   * 
-
-// As user enters information
-// it is pushed to a class or Object
-
-// then the class or object is used to generate the readme fileName
-// createFile("README.md")
