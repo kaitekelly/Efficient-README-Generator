@@ -27,6 +27,8 @@ Screenshot of command line questions and answers:
 Screenshot of generated README for Weather Dashboard:
 ![Screen Shot 2020-05-26 at 8 35 10 PM](https://user-images.githubusercontent.com/61023907/82975503-8180d600-9f91-11ea-97ca-7ac604a05455.png)
 
+Link to user demo video: https://drive.google.com/file/d/1sqktpDrc4HR1iAnUprvLiRUdKaD8iswR/view
+
 # Contribute: 
 Contributor: Kaite Kelly. NPM's used: Inquirer, File System, sheild.co for badge.
 

@@ -51,25 +51,17 @@ const questions = [{
 ]
 
 function writeToFile(fileName, data) {
-    console.log("testing the write to file function");
     var fileName = 'README.md';
-
-
     fs.writeFile(fileName, data,  "utf-8", function(err) {
         if (err)  throw err;  
         console.log("Success!");
-
     });
-
 }
 
 function init() {
-    console.log('testing');
 
     inquirer.prompt(questions)
     .then(function(data) {
-        console.log('testing the init');
-
         //this line of code prints the data object to the terminal
         let readme = generateMarkdown(data);
         var fileName = 'README.md';
